@@ -1,0 +1,108 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6B4226, #3E2723);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #FFD7B5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+}
+
+.receita {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+.receita img {
+    width: 250px;
+    height: 170px;
+    border-radius: 15px;
+    border: 4px solid #FFD7B5;
+    margin-right: 20px;
+}
+
+.receita.invertida {
+    flex-direction: row-reverse;
+}
+
+.receita .conteudo {
+    flex: 1;
+}
+
+h2 {
+    color: #FFD7B5;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+.motivacao {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.motivacao h2 {
+    color: #FFC48C;
+    font-size: 2em;
+}
+
+.motivacao ul {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.motivacao p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #FFD7B5;
+}
+
+@media (max-width: 768px) {
+    .receita {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .receita img {
+        margin: 0 0 15px 0;
+        width: 90%;
+        height: auto;
+    }
+}
+

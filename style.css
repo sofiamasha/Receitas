@@ -1,0 +1,242 @@
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #5C4033, #8B5A2B);
+    color: #FAF3E0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    color: #E3C5A8;
+}
+
+
+.nav .menu-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    color: #FAF3E0;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    animation: slide 15s linear infinite;
+}
+
+.slider-track img {
+    width: 200px;
+    height: 150px;
+    margin: 0 10px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-500%); }
+}
+
+/* Receitas da Vó */
+.receitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.receita-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.receita-card:hover {
+    transform: translateY(-10px);
+}
+
+.receita-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.receita-card-content {
+    padding: 20px;
+}
+
+.receita-card h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #724e36;
+}
+
+/* Área da Saúde */
+.saude-section {
+    background: linear-gradient(45deg, rgb(32, 32, 32, 0.8), rgb(112, 76, 51, 0.8));
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.saude-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.saude-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+.saude-card h3 {
+    color: #d29d41;
+    margin-bottom: 15px;
+}
+
+/* Botões e elementos interativos */
+.botao {
+    display: inline-block;
+    background: linear-gradient(45deg, #6F4E37, #A67B5B);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* quem somos\tendencias */
+@media (max-width: 768px) {
+    .nav .menu-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    }
+
+    .tendencias-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .tendencias-container img {
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+        border-radius: 10px;
+        border: 4px solid #D2A679;
+    }
+@media (max-width: 600px) {
+    .quem-somos .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quem-somos img {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    .quem-somos p {
+        font-size: 0.9em;
+        line-height: 1.4;
+        padding: 0 15px;
+    }
+}
+
+.feedbacks-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 200px; 
+    position: relative;
+}
+
+.feedbacks-slider .feedbacks-track {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: feedbacks-scroll 20s linear infinite;
+}
+    .feedbacks-slider p {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 15px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 600px;
+        white-space: normal;
+    }
+
+
+@keyframes feedbacks-scroll {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}

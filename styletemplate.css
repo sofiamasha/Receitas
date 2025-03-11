@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #1b1b1b;
+    padding: 40px 0;
+}
+
+
+.carrossel {
+    display: flex;
+    gap: 20px; 
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    white-space: nowrap; 
+}
+
+/* Esconder barra de rolagem */
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px; 
+    height: 200px; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+.item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+/* Efeito ao passar o mouse */
+.item:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Botões de navegação */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 14px 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carrossel {
+        overflow-x: auto;
+    }
+
+    .item {
+        width: 400px; /* Ajustado para telas menores */
+        height: 180px;
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 28px;
+        padding: 12px 16px;
+    }
+}

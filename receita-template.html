@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Receitas</title>
+    <link rel="stylesheet" href="styletemplate.css">
+</head>
+<body>
+
+    <div class="carrossel-container">
+        <button class="prev" onclick="moverCarrossel(-1)">&#10094;</button>
+
+        <div class="carrossel">
+            <a href="aperitivos.html" class="item" style="background-image: url('aperitivo.jpg');">Aperitivo</a>
+            <a href="sobremesas.html" class="item" style="background-image: url('sobresa.jpg');">Sobremesa</a>
+            <a href="carnes.html" class="item" style="background-image: url('carnes.avif');">Carnes</a>
+            <a href="massas.html" class="item" style="background-image: url('massas.webp');">Massas</a>
+            <a href="molhos.html" class="item" style="background-image: url('molhos.jpg');">Molhos</a>
+            <a href="peixes.html" class="item" style="background-image: url('peixes.jpg');">Peixes</a>
+            <a href="risotos.html" class="item" style="background-image: url('risoto.jpg');">Risoto</a>
+            <a href="sopas.html" class="item" style="background-image: url('sopa.jpg');">Sopa</a>
+            <a href="frango.html" class="item" style="background-image: url('frango.jpg');">Frango</a>
+            <a href="lanches.html" class="item" style="background-image: url('lanche.jpeg');">Lanche</a>
+            
+    
+        </div>
+
+        <button class="next" onclick="moverCarrossel(1)">&#10095;</button>
+    </div>
+
+    <script>
+        function moverCarrossel(direcao) {
+            const container = document.querySelector('.carrossel');
+            const scrollAmount = 300; // Pixels para mover
+            container.scrollBy({ left: direcao * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #5A3E2B, #3E2A1E);
+    color: #E5D1B8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #E5C29F;
+}
+
+/* Layout das receitas */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+}
+
+.receita {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+.receita img {
+    width: 250px;
+    height: 180px;
+    border-radius: 15px;
+    border: 4px solid #C4A484;
+    margin-right: 20px;
+}
+
+.receita.invertida {
+    flex-direction: row-reverse;
+}
+
+.receita .conteudo {
+    flex: 1;
+}
+
+h2 {
+    color: #E5C29F;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #C4A484;
+}
+
+ul, ol {
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .receita {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .receita img {
+        margin: 0 0 15px 0;
+        width: 220px;
+        height: 160px;
+    }
+}
+
+
